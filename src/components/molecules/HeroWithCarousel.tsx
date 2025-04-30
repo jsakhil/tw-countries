@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { cn } from "../../utils/cn";
-import leftIcon from "../../../public/images/icons-png/left.png";
-import rightIcon from "../../../public/images/icons-png/right.png";
+import leftIcon from "../../assets/images/icons-png/left.png";
+import rightIcon from "../../assets/images/icons-png/right.png";
 
 interface HeroWithCarouselProps {
   carouselImages: string[];

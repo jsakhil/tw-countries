@@ -1,10 +1,13 @@
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logout } from "../../store/slices/authSlice";
 
 export const LogoutButton = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
+    dispatch(logout());
     navigate("/login");
   };
 

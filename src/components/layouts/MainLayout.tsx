@@ -1,20 +1,21 @@
 import { Outlet, NavLink, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { cn } from "../../utils/cn";
 import { HEADER_NAV_ITEMS, SOCIAL_LINKS } from "../../constants/nav";
 import { LogoutButton, SocialIcon } from "../atoms";
 import { useEffect, useState } from "react";
-import menuIcon from "../../../public/images/icons-png/menu.png";
+import menuIcon from "../../assets/images/icons-png/menu.png";
 
 export const MainLayout = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const isLoggedIn = useSelector((state: any) => state.auth.isLoggedIn);
 
   useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
     if (!isLoggedIn) {
       navigate("/login");
     }
-  }, [navigate]);
+  }, [isLoggedIn, navigate]);
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-gray-800">
