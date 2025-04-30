@@ -20,7 +20,7 @@ export const MainLayout = () => {
     <div className="min-h-screen flex flex-col bg-background text-gray-800">
       <header className="bg-white">
         <div className="container mx-auto px-4 py-10 mb-5 flex justify-between items-center">
-          <h1 className="font-noto text-[24px] font-bold text-[#3D3D3D]">Countries</h1>
+          <NavLink to="/"><h1 className="font-noto text-[24px] font-bold text-[#3D3D3D]">Countries</h1></NavLink>
 
           <button
             className="lg:hidden"
