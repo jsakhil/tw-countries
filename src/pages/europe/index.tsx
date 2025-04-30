@@ -9,10 +9,12 @@ const Europe = () => {
         </h1>
       </div>
       <HeroWithCarousel
-        carouselImages={Array.from(
-          { length: 4 },
-          (_, i) => "https://placehold.co/800x500?text=" + (i + 1)
-        )}
+        carouselImages={[
+          '/images/pexels-kayode-fashola-171812-621812.jpg',
+          '/images/pexels-pixabay-414094.jpg',
+          '/images/pexels-sevenstormphotography-575362.jpg',
+          '/images/pexels-tanathip-rattanatum-1050216-2026454.jpg',
+        ]}
         bannerImage="https://placehold.co/300x600?text=Europe"
         bannerResImage="https://placehold.co/600x300?text=Europe"
       />

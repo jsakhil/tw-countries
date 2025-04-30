@@ -32,7 +32,7 @@ export const HeroWithCarousel = ({
         <img
           src={carouselImages[current]}
           alt={`Slide ${current + 1}`}
-          className="object-contain w-full"
+          className="object-cover w-full max-h-[500px]"
         />
 
         <div className="absolute bottom-4 flex items-center justify-center gap-2 my-4">
